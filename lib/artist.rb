@@ -1,5 +1,4 @@
 require 'pry'
- # require_relative "../config/environment.rb"
 
  class Artist
    extend Concerns::Findable
@@ -40,12 +39,10 @@ require 'pry'
 
        song.artist = self unless song.artist
        songs << song unless songs.include?(song)
-       # @songs.uniq!
 
    end
 
    def genres
-     # self.songs.collect {|song| song.genre}
      songs.collect { |song| song.genre}.uniq
    end
  end
